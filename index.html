@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+    <title>Random number</title>
+</head>
+
+<body class="bg-slate-50">
+    <div class="number-body flex justify-center items-center w-screen h-screen flex-col">
+        <h1 class="text-blue-600 font-mono font-bold text-2xl" id="randomNumbers"></h1>
+        <button
+            class="bg-transparent font-mono text-blue-600 font-bold border-blue-600 border-2 rounded-md px-4 py-1 mt-5 hover:bg-blue-600 hover:text-white"
+            onclick="randomNumber()">Generate</button>
+    </div>
+
+
+    <script>
+        function randomNumber() {
+            let resultPlace = document.getElementById("randomNumbers")
+            let random = Math.round(Math.random() * 90000) + 10000
+            resultPlace.innerText = random;
+        }
+    </script>
+
+</body>
+
+</html>
